@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Requies a few clicks to confirm some installs (so missing -y autoconfirm in a few places)
 # And at least one restart, so this is not a fully automated shell script
 # So you'll need to copy and paste commands into the terminal
@@ -64,3 +65,28 @@ sudo apt-get install -y --no-install-recommends libnvinfer5=5.1.2-1+cuda10.0
 
 # More system setup
 sudo apt install git -y
+sudo apt install curl -y
+sudo apt-get install cpu-checker -y
+sudo apt install cpu-checker -y
+
+# ------------------------------------------- Installing flutter --------------------------------------------------
+
+curl https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.2.1-stable.tar.xz --output /home/troy/Downloads/flutter_linux_v1.2.1-stable.tar.xz
+mkdir ~/development
+cd ~/development
+tar xf ~/Downloads/flutter_linux_v1.2.1-stable.tar.xz
+
+
+echo  'export PATH="$PATH:/home/troy/development/flutter/bin"' >> ~/.bashrc
+source $HOME/.bash_profile
+
+
+sudo snap install android-studio --classic
+
+
+$ sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y
+# thanks to https://stackoverflow.com/questions/37300811/android-studio-dev-kvm-device-permission-denied
+sudo adduser $USER kvm
+
+# needs to be manually accepted
+flutter doctor --android-licenses
