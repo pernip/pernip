@@ -45,7 +45,7 @@ olefile==0.45.1
 pbr==5.2.0
 pexpect==4.2.1
 Pillow==5.1.0
-protobuf==3.7.1
+protobuf==3.18.3
 ptyprocess==0.6.0
 pycairo==1.16.2
 pycparser==2.19
